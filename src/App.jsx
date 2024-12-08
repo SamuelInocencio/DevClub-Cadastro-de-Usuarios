@@ -1,18 +1,16 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import { Container, Title } from './styles'
+// import { useState } from 'react'
+// import reactLogo from './assets/react.svg'
+// import viteLogo from '/vite.svg'
+
+import { Container, TopBackground } from './styles'
 
 
 function App() {
 
 
   return (
-    <>
-      <Container>
-        <Title>Samuel Ferreira Inocêncio - Programador!!!</Title>
-      </Container>
-    </>
+    
+
   )
 }
 

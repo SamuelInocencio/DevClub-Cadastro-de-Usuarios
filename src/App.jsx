@@ -1,37 +1,42 @@
-import { Button, Container, ContainerInputs, Form, Input, InputLabel, TopBackground } from './styles'
+import { Button, Container, ContainerInputs, Form, Input, InputLabel, Title, TopBackground } from './styles'
 
+import UsersImage from './assets/users.png'
 
-function App() {
+function Home() {
 
 
   return (
     <Container>
       <TopBackground>
-        <img />
+        <img src={UsersImage} />
       </TopBackground>
+
+      <Title>Cadastrar Usuários</Title>
+
       <Form>
         <ContainerInputs>
+
           <div>
-            <div>
-              <InputLabel>
-                Nome<span>*</span></InputLabel>
-              <Input type='text' placeholder='Nome do usuário' />
-            </div>
-            <div>
-              <InputLabel>
-                Idade<span>*</span>
-              </InputLabel>
-              <Input type='number' placeholder='Idade de usuário' />
-            </div>
+            <InputLabel>
+              Nome<span> *</span></InputLabel>
+            <Input type='text' placeholder='Nome do usuário' />
           </div>
           <div>
             <InputLabel>
-              Email<span>*</span>
-              <Input type='email' placeholder='E-mail do usuário' />
+              Idade<span> *</span>
             </InputLabel>
+            <Input type='number' placeholder='Idade de usuário' />
           </div>
 
         </ContainerInputs>
+        <div style={{ width: '100%' }}>
+          <InputLabel>
+            Email<span> *</span>
+            <Input type='email' placeholder='E-mail do usuário' />
+          </InputLabel>
+        </div>
+
+
         <Button>Cadastrar Usuário</Button>
       </Form>
     </Container>
@@ -40,4 +45,4 @@ function App() {
   )
 }
 
-export default App
+export default Home

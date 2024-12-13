@@ -1,4 +1,4 @@
-import Button from './styles'
+import { Button } from './styles'
 
 function DefaultButton() {
 

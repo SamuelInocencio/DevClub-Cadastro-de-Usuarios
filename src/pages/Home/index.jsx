@@ -54,8 +54,9 @@ function Home() {
         </div>
 
 
-        <Button type='button' onClick={registerNewUser}>Cadastrar Usuário</Button>
+        <Button type='button' onClick={registerNewUser} theme="primary">Cadastrar Usuário</Button>
       </Form>
+      <Button type='button' >Ver lista de  Usuários</Button>
     </Container>
 
 

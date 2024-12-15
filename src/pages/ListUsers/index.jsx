@@ -1,8 +1,20 @@
+import { useEffect } from "react";
+import api from "../../services/api";
+
 import { Button } from "../../components/Button/styles"
 import TopBackground from "../../components/TopBackground"
 
 
 function ListUsers() {
+
+    useEffect(() => {
+        async function getUsers() {
+            const usersFromApi = await api.get('/usuarios')
+            console.log(usersFromApi)
+        }
+        getUsers()
+    }, [])
+
 
     return (
         <div>

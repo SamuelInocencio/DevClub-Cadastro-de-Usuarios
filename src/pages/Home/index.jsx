@@ -1,4 +1,5 @@
 import { useRef } from 'react'
+import { useNavigate } from 'react-router-dom'
 import api from '../../services/api'
 
 import { Container, ContainerInputs, Form, Input, InputLabel, Title } from './styles'
@@ -11,6 +12,8 @@ function Home() {
   const inputName = useRef()
   const inputAge = useRef()
   const inputEmail = useRef()
+
+  const navigate = useNavigate()
 
 
 
@@ -56,7 +59,7 @@ function Home() {
 
         <Button type='button' onClick={registerNewUser} theme="primary">Cadastrar Usuário</Button>
       </Form>
-      <Button type='button' >Ver lista de  Usuários</Button>
+      <Button type='button' onClick={() => navigate('/lista-de-usuarios')} >Ver lista de  Usuários</Button>
     </Container>
 
 

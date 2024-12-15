@@ -3,7 +3,7 @@ import api from '../../services/api'
 
 import { Container, ContainerInputs, Form, Input, InputLabel, Title } from './styles'
 
-import UsersImage from '../../assets/users.png'
+
 import Button from '../../components/Button'
 import TopBackground from '../../components/TopBackground'
 

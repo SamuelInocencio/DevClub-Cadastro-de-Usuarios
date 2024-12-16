@@ -3,6 +3,7 @@ import api from "../../services/api";
 
 import { Button } from "../../components/Button/styles"
 import TopBackground from "../../components/TopBackground"
+import { Container, Title, ContainerUsers, CardUsers, TrashIcon } from "./styles";
 
 
 
@@ -20,21 +21,28 @@ function ListUsers() {
 
 
     return (
-        <div>
+        <Container>
             <TopBackground />
+            <Title>Lista de Usuários</Title>
 
-            <h1>Listagem de Usuários</h1>
+            <ContainerUsers>
+                {users.map((user) => (
+                    <CardUsers key={user.id}>
+                        <div>
+                            <p>{user.name}</p>
+                            <p>{user.email}</p>
+                            <p>{user.age}</p>
+                        </div>
+                        <TrashIcon />
+                    </CardUsers>
+                ))}
 
-            {users.map((user) => (
-                <div key={user.id}>
-                    <p>{user.name}</p>
-                    <p>{user.email}</p>
-                    <p>{user.age}</p>
-                </div>
-            ))}
-            <Button>Voltar</Button>
-        </div>
+            </ContainerUsers >
+            <Button type="button">Voltar</Button>
+        </Container>
     )
 }
+
+
 
 export default ListUsers
